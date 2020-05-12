@@ -5,7 +5,7 @@ import { CharactersService } from '../../../services/characters/characters.servi
 @Component({
   selector: 'app-characters',
   templateUrl: './characters.component.html',
-  styleUrls: ['./characters.component.sass'],
+  styleUrls: ['./characters.component.scss'],
 })
 export class CharactersComponent implements OnInit {
   characters: Character[];
