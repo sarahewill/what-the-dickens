@@ -1,4 +1,9 @@
 <div *ngIf="character">
-  <p>{{ character.first }}</p>
+  <h1>{{ character.first }} {{ character.last }} - {{ character.book }}</h1>
   <p>{{ character.description }}</p>
+  <p>{{ character.location }}</p>
+  <div class="map-container" fxLayout="row" fxLayoutAlign="space-around center">
+    <div style="border: 1px solid red; width: 300px;">MAP</div>
+    <div>Not Map</div>
+  </div>
 </div>
