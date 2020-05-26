@@ -7,9 +7,17 @@ import { CharactersViewComponent } from './characters-view/characters-view.compo
 import { MatIconModule } from '@angular/material/icon';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppMaterialModule } from '../material/material.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [CharactersComponent, CharactersViewComponent],
-  imports: [CommonModule, AppMaterialModule, CharactersRoutingModule, MatIconModule, FlexLayoutModule],
+  imports: [
+    CommonModule,
+    AppMaterialModule,
+    CharactersRoutingModule,
+    MatIconModule,
+    FlexLayoutModule,
+    ReactiveFormsModule,
+  ],
 })
 export class CharactersModule {}

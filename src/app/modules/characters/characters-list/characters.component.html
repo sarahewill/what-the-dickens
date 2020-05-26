@@ -1,12 +1,19 @@
 <div class="container">
   <div class="nav">
-    <ul>
-      <li *ngFor="let character of characters">
-        <button mat-button routerLink="view/{{ character.id }}">
-          <mat-icon color="accent">face</mat-icon> {{ character.first }} {{ character.last }}
-        </button>
-      </li>
-    </ul>
+    <form [formGroup]="myForm">
+      <mat-form-field>
+        <input placeholder="search" matInput formControlName="myInput" [matAutocomplete]="auto" />
+      </mat-form-field>
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option
+          routerLink="view/{{ char.id }}"
+          *ngFor="let char of filteredCharacters | async"
+          [value]="char.first + ' ' + char.last"
+        >
+          {{ char.first }} {{ char.last }}
+        </mat-option>
+      </mat-autocomplete>
+    </form>
   </div>
   <div class="description">
     <router-outlet></router-outlet>
