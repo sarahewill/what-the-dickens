@@ -1,21 +1,23 @@
-<div class="container">
-  <div class="nav">
-    <form [formGroup]="myForm">
-      <mat-form-field>
-        <input placeholder="search" matInput formControlName="myInput" [matAutocomplete]="auto" />
-      </mat-form-field>
-      <mat-autocomplete #auto="matAutocomplete">
-        <mat-option
-          routerLink="view/{{ char.id }}"
-          *ngFor="let char of filteredCharacters | async"
-          [value]="char.first + ' ' + char.last"
-        >
-          {{ char.first }} {{ char.last }}
-        </mat-option>
-      </mat-autocomplete>
-    </form>
-  </div>
-  <div class="description">
-    <router-outlet></router-outlet>
+<div class="container" fxLayoutAlign="center start">
+  <div class="child-container" fxFlex="80%" fxFlex.lt-sm="100%" fxLayoutAlign="space-between start" fxLayout="row">
+    <div class="nav" fxFlex="20">
+      <form [formGroup]="myForm">
+        <mat-form-field>
+          <input placeholder="search" matInput formControlName="myInput" [matAutocomplete]="auto" />
+        </mat-form-field>
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option
+            routerLink="view/{{ char.id }}"
+            *ngFor="let char of filteredCharacters | async"
+            [value]="char.first + ' ' + char.last"
+          >
+            {{ char.first }} {{ char.last }}
+          </mat-option>
+        </mat-autocomplete>
+      </form>
+    </div>
+    <div class="description" fxFlex>
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </div>

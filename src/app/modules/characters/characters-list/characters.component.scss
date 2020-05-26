@@ -5,6 +5,18 @@ ul {
 }
 
 .container {
+  border: 1px solid red;
   display: flex;
   flex-direction: row;
+}
+
+.child-container {
+  border: 1px solid orange;
+}
+.description {
+  border: 1px solid green;
+}
+
+.nav {
+  border: 1px solid blue;
 }
