@@ -5,9 +5,10 @@
     fxFlex.lt-sm="100%"
     fxLayoutAlign="space-between start"
     fxLayout="row"
-    fxLayoutGap="40px"
+    fxLayoutGap="20px"
+    fxLayout.lt-md="column"
   >
-    <div class="nav" fxFlex="20" fxFlex.lt-sm="grow">
+    <div class="nav" fxFlex="20">
       <form [formGroup]="myForm">
         <mat-form-field>
           <input placeholder="search" matInput formControlName="myInput" [matAutocomplete]="auto" />
