@@ -1,3 +1,12 @@
-<mat-toolbar
-  ><img class="logo" src="../../assets/images/gettyimages-2668291-612x612.jpg" />What the Dickens</mat-toolbar
->
+<mat-toolbar>
+  <div fxLayoutAlign="center start" fxFlex="100%">
+    <div fxFlex="80%" fxFlex.lt-sm="100%" fxLayoutAlign="space-between center" fxLayout="row">
+      <div><img class="logo" src="../../assets/images/gettyimages-2668291-612x612.jpg" />What the Dickens</div>
+
+      <div>
+        <button mat-button routerLink="/characters">Characters</button>
+        <button mat-button routerLink="/pubs">Pubs</button>
+      </div>
+    </div>
+  </div>
+</mat-toolbar>
