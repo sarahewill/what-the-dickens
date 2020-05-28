@@ -4,8 +4,13 @@
       <div><img class="logo" src="../../assets/images/gettyimages-2668291-612x612.jpg" />What the Dickens</div>
 
       <div>
-        <button mat-button routerLink="/characters">Characters</button>
-        <button mat-button routerLink="/pubs">Pubs</button>
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item routerLink="/characters">Characters</button>
+          <button mat-menu-item routerLink="/pubs">Pubs</button>
+        </mat-menu>
       </div>
     </div>
   </div>
