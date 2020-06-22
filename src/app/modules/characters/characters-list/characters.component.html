@@ -11,7 +11,12 @@
     <div class="nav" fxFlex="20">
       <form [formGroup]="myForm">
         <mat-form-field>
-          <input placeholder="search" matInput formControlName="myInput" [matAutocomplete]="auto" />
+          <input
+            placeholder="search for a character here"
+            matInput
+            formControlName="myInput"
+            [matAutocomplete]="auto"
+          />
         </mat-form-field>
         <mat-autocomplete #auto="matAutocomplete">
           <mat-option
@@ -25,6 +30,7 @@
       </form>
     </div>
     <div class="description" fxFlex>
+      <h1>Character Details</h1>
       <router-outlet></router-outlet>
     </div>
   </div>
