@@ -27,6 +27,11 @@ export class CharactersComponent implements OnInit {
     );
   }
 
+  getRelatedCharacters(char: Character): Character[] {
+    const lastName = char.last;
+    return this.characters.filter((character) => (character.last = lastName));
+  }
+
   getCharacters(): void {
     this.charactersService.getCharacters().subscribe((characters) => (this.characters = characters));
   }
