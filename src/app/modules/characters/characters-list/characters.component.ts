@@ -17,6 +17,7 @@ export class CharactersComponent implements OnInit {
   constructor(private fb: FormBuilder, private charactersService: CharactersService) {}
 
   ngOnInit(): void {
+    this.filteredCharacters = new Observable();
     this.getCharacters();
     this.myForm = this.fb.group({
       myInput: null,
@@ -38,6 +39,8 @@ export class CharactersComponent implements OnInit {
 
   private _filter(value: string) {
     const filterValue = value.toLowerCase();
-    return this.characters.filter((char) => (char.first.toLowerCase() + char.last.toLowerCase()).includes(filterValue));
+    return this.characters?.filter((char) =>
+      (char.first.toLowerCase() + char.last.toLowerCase()).includes(filterValue)
+    );
   }
 }

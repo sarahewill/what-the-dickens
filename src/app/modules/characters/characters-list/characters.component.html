@@ -9,7 +9,7 @@
     fxLayout.lt-md="column"
   >
     <div class="nav" fxFlex="20">
-      <form [formGroup]="myForm">
+      <form [formGroup]="myForm" *ngIf="filteredCharacters">
         <mat-form-field>
           <input
             placeholder="search for a character here"
