@@ -1,12 +1,30 @@
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-import { Character } from '../services/characters/character';
 
 @Injectable({
   providedIn: 'root',
 })
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
+    const users = [
+      {
+        id: '1',
+        userName: 'nerdAlert',
+        password: 'nerdsRule',
+        firstName: 'Becky',
+        lastName: 'Jo',
+        token: 'A23NZ1',
+      },
+      {
+        id: '2',
+        userName: 'dickensFan1',
+        password: 'supersafepassword',
+        firstName: 'Delilah',
+        lastName: 'Peters',
+        token: 'A23NZ2',
+      },
+    ];
+
     const characters = [
       {
         id: '1',
@@ -126,6 +144,6 @@ export class InMemoryDataService implements InMemoryDbService {
         location: 'Oxford Street',
       },
     ];
-    return { characters };
+    return { characters, users };
   }
 }
