@@ -1,6 +1,10 @@
-.logo {
-  border-radius: 20px;
-  height: 30px;
-  width: 30px;
-  margin-right: 10px;
+.logo-container {
+  padding-top: 10px;
+
+  .logo {
+    border-radius: 20px;
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+  }
 }

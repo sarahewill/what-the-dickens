@@ -1,7 +1,10 @@
 <mat-toolbar color="primary">
   <div fxLayoutAlign="center start" fxFlex="100%">
     <div fxFlex="80%" fxFlex.lt-sm="100%" fxLayoutAlign="space-between center" fxLayout="row">
-      <div><img class="logo" src="../../assets/images/gettyimages-2668291-612x612.jpg" />What the Dickens</div>
+      <div fxLayout="row" class="logo-container">
+        <div><img class="logo" src="../../assets/images/gettyimages-2668291-612x612.jpg" /></div>
+        <div>What the Dickens</div>
+      </div>
 
       <div fxShow="true" fxHide.gt-sm="true">
         <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
