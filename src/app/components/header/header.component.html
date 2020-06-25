@@ -3,14 +3,19 @@
     <div fxFlex="80%" fxFlex.lt-sm="100%" fxLayoutAlign="space-between center" fxLayout="row">
       <div><img class="logo" src="../../assets/images/gettyimages-2668291-612x612.jpg" />What the Dickens</div>
 
-      <div>
-        <button color="accent" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <div fxShow="true" fxHide.gt-sm="true">
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
           <mat-icon>more_vert</mat-icon>
         </button>
         <mat-menu #menu="matMenu">
           <button mat-menu-item routerLink="/characters">Characters</button>
           <button mat-menu-item routerLink="/pubs">Pubs</button>
         </mat-menu>
+      </div>
+
+      <div fxShow="true" fxHide.lt-md="true">
+        <button mat-button routerLink="/characters">Characters</button>
+        <button mat-button routerLink="/pubs">Pubs</button>
       </div>
     </div>
   </div>
