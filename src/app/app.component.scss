@@ -3,11 +3,11 @@
 }
 
 .container {
-  background: rgba(176, 175, 80, 0.9);
-  background-image: url('../assets/images/AdobeStock_2_Preview.svg');
+  background: rgba(176, 175, 80, 0.3);
+  background-image: url('../assets/images/AdobeStock_3_Preview.svg');
   background-repeat: no-repeat;
   background-position: right;
   background-size: cover;
-  background-blend-mode: screen;
+  background-blend-mode: color-dodge;
   min-height: 100vh;
 }
