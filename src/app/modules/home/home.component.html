@@ -9,6 +9,10 @@
     fxLayout.lt-md="column"
   >
     <div>
+      <button mat-button *ngIf="isDay">It's a good time for a walk</button>
+      <button mat-button *ngIf="!isDay">
+        It's a good time for an evening stroll
+      </button>
       <h2>Welcome to What the Dickens App</h2>
       <p>
         Sed velit lectus, porttitor eu convallis sit amet, semper eget mauris. Integer in pulvinar mauris. Donec
