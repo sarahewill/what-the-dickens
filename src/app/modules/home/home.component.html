@@ -9,11 +9,7 @@
     fxLayout.lt-md="column"
   >
     <div>
-      <button mat-button *ngIf="isDay">It's a good time for a walk</button>
-      <button mat-button *ngIf="!isDay">
-        It's a good time for an evening stroll
-      </button>
-      <h2>Welcome to What the Dickens App</h2>
+      <h1>Welcome to What the Dickens App</h1>
       <p>
         Sed velit lectus, porttitor eu convallis sit amet, semper eget mauris. Integer in pulvinar mauris. Donec
         facilisis placerat magna sed cursus. Mauris vel tristique arcu. Duis congue orci id libero dictum sollicitudin.
@@ -22,6 +18,13 @@
         sit amet rhoncus nisl. Quisque non vehicula dui. Vestibulum neque tortor, placerat sit amet condimentum euismod,
         suscipit lobortis diam. Sed varius elit non erat dignissim vulputate.
       </p>
+
+      <div class="home-button-area" fxLayoutAlign="center">
+        <button mat-button *ngIf="isDay">It's a good time for a walk</button>
+        <button class="home-button" mat-button *ngIf="!isDay">
+          It's a good time for an evening stroll
+        </button>
+      </div>
     </div>
   </div>
 </div>
