@@ -1,0 +1,28 @@
+p {
+  font-size: 16px;
+  font-weight: normal;
+  padding-top: 10px;
+}
+
+.footer-top {
+  background: #615914;
+  height: 20px;
+  width: 100%;
+}
+
+.footer-twitter {
+  background: none, url('../../../assets/images/twitter.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 25px;
+  margin-top: 4px;
+  width: 25px;
+}
+
+.footer-fb {
+  background: none, url('../../../assets/images/facebook-32.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 25px;
+  width: 25px;
+}
