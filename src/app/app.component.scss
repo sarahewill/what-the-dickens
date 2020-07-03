@@ -3,11 +3,10 @@
 }
 
 .container {
-  background: rgba(176, 175, 80, 0.3);
-  background-image: url('../assets/images/AdobeStock_3_Preview.svg');
+  background: white;
+  background-image: url('../assets/images/map.png');
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: center;
   background-size: cover;
-  background-blend-mode: color-dodge;
   min-height: 100vh;
 }
