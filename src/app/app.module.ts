@@ -9,7 +9,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MessagesComponent } from './components/messages/messages.component';
 import { AppMaterialModule } from './modules/material/material.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-mem-db/in-memory-data.service';
 
@@ -22,6 +22,7 @@ import { InMemoryDataService } from './in-mem-db/in-memory-data.service';
     FlexLayoutModule,
     AppMaterialModule,
     HttpClientModule,
+    HttpClientJsonpModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation: false }),
   ],
   providers: [],

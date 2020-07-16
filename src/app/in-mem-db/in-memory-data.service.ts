@@ -25,6 +25,9 @@ export class InMemoryDataService implements InMemoryDbService {
       },
     ];
 
+    const weatherstack = {
+      city: 'London',
+    };
     const characters = [
       {
         id: '1',
@@ -144,6 +147,6 @@ export class InMemoryDataService implements InMemoryDbService {
         location: 'Oxford Street',
       },
     ];
-    return { characters, users };
+    return { characters, users, weatherstack };
   }
 }

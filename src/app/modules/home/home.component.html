@@ -21,7 +21,7 @@
 
       <div class="home-button-area" fxLayoutAlign="center">
         <button mat-button *ngIf="isDay">Start a walk</button>
-        <button class="home-button" mat-button *ngIf="!isDay">
+        <button class="home-button" mat-button *ngIf="!isDay" routerLink="/walk">
           Start an evening stroll
         </button>
       </div>
