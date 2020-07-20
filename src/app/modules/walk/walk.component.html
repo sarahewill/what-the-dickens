@@ -1,1 +1,28 @@
-<p>walk works!</p>
+<div class="container" fxLayoutAlign="center start">
+  <div
+    class="child-container"
+    fxFlex="80%"
+    fxFlex.lt-sm="100%"
+    fxLayoutAlign="start"
+    fxLayout="row"
+    fxLayoutGap="20px"
+    fxLayout.lt-md="column"
+  >
+    <div>
+      <div *ngIf="assignedCharacter">
+        Your character is
+        {{ assignedCharacter.first + ' ' + assignedCharacter.last + ' from ' + assignedCharacter.book }}
+      </div>
+      <google-map height="550px" width="100%" [zoom]="zoom" [center]="center" [options]="options">
+        <map-marker
+          *ngFor="let marker of markers"
+          [position]="marker.position"
+          [label]="marker.label"
+          [title]="marker.title"
+          [options]="marker.options"
+        >
+        </map-marker>
+      </google-map>
+    </div>
+  </div>
+</div>
