@@ -9,9 +9,10 @@
     fxLayout.lt-md="column"
   >
     <div>
-      <div *ngIf="assignedCharacter">
+      <div class="assigned-character" *ngIf="assignedCharacter">
         Your character is
         {{ assignedCharacter.first + ' ' + assignedCharacter.last + ' from ' + assignedCharacter.book }}
+        <button (click)="getRandomCharacter()">CHANGE</button>
       </div>
       <google-map height="550px" width="100%" [zoom]="zoom" [center]="center" [options]="options">
         <map-marker
@@ -23,6 +24,7 @@
         >
         </map-marker>
       </google-map>
+      <button mat-button (click)="startWalk()">START WALK</button>
     </div>
   </div>
 </div>
