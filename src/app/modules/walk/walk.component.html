@@ -24,6 +24,14 @@
         >
         </map-marker>
       </google-map>
+      <div class="filter">
+        <mat-label>Filter walk distance: </mat-label>
+        <mat-radio-group class="filter-radio-group" [(ngModel)]="filter" (change)="updateRoute()">
+          <mat-radio-button class="filter-radio-button" *ngFor="let filter of filters" [value]="filter.value">{{
+            filter.name
+          }}</mat-radio-button>
+        </mat-radio-group>
+      </div>
       <button mat-button (click)="startWalk()">START WALK</button>
     </div>
   </div>

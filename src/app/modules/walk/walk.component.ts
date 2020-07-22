@@ -12,7 +12,10 @@ export interface Location {
   lat: number;
   lng: number;
 }
-
+export interface Filter {
+  name: string;
+  value: number;
+}
 @Component({
   selector: 'app-walk',
   templateUrl: './walk.component.html',
@@ -35,6 +38,22 @@ export class WalkComponent implements OnInit {
   };
   markers = [];
   walk: Walk;
+  filters: Filter[] = [
+    {
+      name: 'short',
+      value: 0.15,
+    },
+    {
+      name: 'med',
+      value: 0.25,
+    },
+    {
+      name: 'long',
+      value: 0.33,
+    },
+  ];
+  filter = 0.15;
+
   ngOnInit() {
     this.center = {
       lat: 51.512732,
@@ -47,10 +66,13 @@ export class WalkComponent implements OnInit {
   }
 
   addMarker() {
-    // todo: get users location instead of random London location based on center
+    // todo: get users actual location
     this.markers.push(
       {
-        position: this.getRandomLatLong(),
+        position: {
+          lat: 51.51273,
+          lng: -0.111999,
+        },
         label: {
           color: 'black',
           text: 'Your Location',
@@ -78,8 +100,8 @@ export class WalkComponent implements OnInit {
 
   getRandomLatLong(): Location {
     const location = {
-      lat: this.center.lat + ((Math.random() - 0.5) * 1.5) / 10,
-      lng: this.center.lng + ((Math.random() - 0.5) * 1.5) / 10,
+      lat: this.center.lat + ((Math.random() * (-0.05 - 0.33) + 0.33 - this.filter) * 1.5) / 10,
+      lng: this.center.lng + ((Math.random() * (-0.05 - 0.33) + 0.33 - this.filter) * 1.5) / 10,
     };
     this.usersLocation = location;
     return location;
@@ -98,5 +120,12 @@ export class WalkComponent implements OnInit {
       character: this.assignedCharacter,
     };
     console.log('add start walk service here', this.walk);
+  }
+
+  updateRoute() {
+    if (this.usersLocation) {
+      this.markers = [];
+      this.addMarker();
+    }
   }
 }

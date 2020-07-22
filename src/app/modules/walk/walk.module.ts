@@ -6,9 +6,18 @@ import { WalkRoutingModule } from './walk-routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppMaterialModule } from '../material/material.module';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [WalkComponent],
-  imports: [CommonModule, WalkRoutingModule, FlexLayoutModule, AppMaterialModule, GoogleMapsModule],
+  imports: [
+    CommonModule,
+    WalkRoutingModule,
+    FlexLayoutModule,
+    AppMaterialModule,
+    GoogleMapsModule,
+    ReactiveFormsModule,
+    FormsModule,
+  ],
 })
 export class WalkModule {}
