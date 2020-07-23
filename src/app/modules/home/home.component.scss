@@ -5,11 +5,15 @@
     margin-top: 40px;
 
     .home-button {
-      background: #1b1e5e;
+      background: #c5c5c5;
       color: white;
       font-size: 23px;
       font-weight: lighter;
       padding: 10px 20px;
+
+      .icons {
+        display: inline-block;
+      }
     }
   }
 }

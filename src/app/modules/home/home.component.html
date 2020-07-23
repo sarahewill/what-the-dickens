@@ -20,8 +20,12 @@
       </p>
 
       <div class="home-button-area" fxLayoutAlign="center">
-        <button mat-button *ngIf="isDay">Start a walk</button>
+        <button mat-button class="home-button" *ngIf="isDay" routerLink="/walk">
+          <div class="icons"><img *ngFor="let img of icons" src="{{ img }}" /></div>
+          Start a walk
+        </button>
         <button class="home-button" mat-button *ngIf="!isDay" routerLink="/walk">
+          <div class="icons"><img *ngFor="let img of icons" src="{{ img }}" /></div>
           Start an evening stroll
         </button>
       </div>

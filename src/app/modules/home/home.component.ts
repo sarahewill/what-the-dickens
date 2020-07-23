@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit {
   constructor(private apixuService: ApixuService) {}
   weatherInLondon: Weatherstack;
   isDay: boolean;
+  icons: string[];
 
   ngOnInit(): void {
     this.sendToAPIXU();
@@ -19,10 +20,9 @@ export class HomeComponent implements OnInit {
   sendToAPIXU() {
     this.apixuService.getWeather().subscribe((data: Weatherstack) => {
       this.weatherInLondon = data;
-      if (this.weatherInLondon.current.is_day === 'no') {
-        this.isDay = false;
-      } else {
-        this.isDay = true;
+      this.isDay = this.weatherInLondon.current.is_day !== 'no';
+      if (this.weatherInLondon.current.weather_icons) {
+        this.icons = this.weatherInLondon.current.weather_icons;
       }
     });
   }
